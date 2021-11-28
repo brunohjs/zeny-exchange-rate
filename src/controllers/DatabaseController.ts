@@ -1,16 +1,14 @@
-import {MongoClient} from "mongodb";
+import {MongoClient, MongoOptions} from "mongodb";
 
 export default class DatabaseController {
 	private client : MongoClient;
+	useUnifiedTopology: MongoOptions;
 
 	constructor(username:string = null, password:string = null) {
 		username = username || process.env.DATABASE_USERNAME;
 		password = password || process.env.DATABASE_PASSWORD;
 		const url = `mongodb+srv://${username}:${password}@cluster0.nk4zj.mongodb.net/zeny-exchange-rate?retryWrites=true&w=majority`;
-		this.client = new MongoClient(url, {
-			useUnifiedTopology: true,
-			useNewUrlParser: true
-		});
+		this.client = new MongoClient(url);
 	}
 
 	async insert(object) {
