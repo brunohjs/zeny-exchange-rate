@@ -6,7 +6,7 @@ const Home: NextPage = () => {
 	return (
 		<div>
 			<main>
-				<p>hello world</p>
+				<p>Zeny Exchange Rate</p>
 			</main>
 			<footer>
 			</footer>
