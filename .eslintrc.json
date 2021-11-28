@@ -24,6 +24,7 @@
 				"ignoreComments": false
 			}
 		],
+		"eol-last": ["error", "always"],
 		"space-before-function-paren": [
 			2,
 			{
